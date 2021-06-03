@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+    -fx-background-image: url("../resources/defenderFondo.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 700px 400px;
+    /*-fx-background-color: #696969;*/
+}
+
+.jfx-button{
+    -jfx-button-type: RAISED;
+    -fx-opacity: 0.8;
+    -fx-content-display: left;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-alignment:CENTER;
+    /*-fx-background-color: #696969;*/
+}
+
+.jfx-button .jfx-rippler{-jfx-rippler-fill: white;}

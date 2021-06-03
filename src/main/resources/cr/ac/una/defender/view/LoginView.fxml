@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="cr.ac.una.defender.controller.LoginViewController">
+   <children>
+      <VBox layoutX="6.0" layoutY="6.0" prefHeight="404.0" prefWidth="640.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="19.0" prefWidth="580.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="lblTituloInicio" alignment="CENTER" prefHeight="25.0" prefWidth="90.0" styleClass="jfx-titulo-principal-label" text="Defender" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="211.0" prefWidth="580.0" spacing="15.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="237.0" prefWidth="477.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label styleClass="jfx-titulo-label" text="Iniciar sesión" textAlignment="CENTER" />
+                              <JFXTextField fx:id="txtUsuario" alignment="CENTER" labelFloat="true" promptText="Usuario">
+                                 <VBox.margin>
+                                    <Insets left="120.0" right="120.0" />
+                                 </VBox.margin>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="txtClave" alignment="CENTER" labelFloat="true" promptText="Clave">
+                                 <VBox.margin>
+                                    <Insets left="120.0" right="120.0" />
+                                 </VBox.margin>
+                              </JFXPasswordField>
+                              <Label fx:id="labelOlvidarClave" onMouseClicked="#onActionLabelOlvidasteClave" styleClass="jfx-text-field" text="¿Olvidaste tu clave?" textAlignment="CENTER" textFill="#006bff" underline="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Separator orientation="VERTICAL" prefHeight="287.0" prefWidth="0.0" styleClass="jfx-button-inicio">
+                           <HBox.margin>
+                              <Insets bottom="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" styleClass="contenedorBtn" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="btnIngresar" onAction="#onActionBtnIngresar" prefHeight="47.0" prefWidth="104.0" text="Ingresar" />
+                        <JFXButton fx:id="btnRegistro" onAction="#onActionBtnRegistro" prefHeight="47.0" prefWidth="104.0" text="Registrarse" />
+                        <JFXButton fx:id="btnCreditos" onAction="#onActionBtnCreditos" prefHeight="47.0" prefWidth="104.0" text="Creditos" />
+                        <JFXButton fx:id="btnSalir" onAction="#onActionBtnSalir" prefHeight="47.0" prefWidth="104.0" text="Salir" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
