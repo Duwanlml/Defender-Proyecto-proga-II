@@ -6,32 +6,23 @@
 package cr.ac.una.defender.controller;
 
 import com.jfoenix.controls.JFXButton;
-import cr.ac.una.defender.util.FlowController;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
  *
- * @author duwan
+ * @author Haymara
  */
-public class PrincipalViewController extends Controller implements Initializable {
+public class MenuPartidaViewController extends Controller implements Initializable {
 
     @FXML
-    private AnchorPane root;
+    private JFXButton btnNuevaPartida;
     @FXML
-    private JFXButton btnMusica;
-    @FXML
-    private ImageView imvMusica;
-    @FXML
-    private JFXButton btnStart;
-    @FXML
-    private JFXButton btnEstadistica;
+    private JFXButton btnCancelar;
 
     /**
      * Initializes the controller class.
@@ -42,17 +33,16 @@ public class PrincipalViewController extends Controller implements Initializable
     }    
 
     @FXML
-    private void onActionBtnStart(ActionEvent event) {
-        getStage().close();
-        FlowController.getInstance().goViewInWindow("LoginView");
+    private void onActionBtnNuevaPartida(ActionEvent event) {
+         getStage().close();
     }
 
     @FXML
-    private void onActionBtnEstadistica(ActionEvent event) {
+    private void onActionBtnCancelar(ActionEvent event) {
     }
 
     @Override
     public void initialize() {
-    }
+     }
     
 }

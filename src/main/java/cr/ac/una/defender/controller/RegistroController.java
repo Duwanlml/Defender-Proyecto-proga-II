@@ -7,6 +7,7 @@ package cr.ac.una.defender.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
+import cr.ac.una.defender.util.Formato;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -24,12 +25,6 @@ public class RegistroController extends Controller implements Initializable {
     @FXML
     private JFXTextField txtUsuario;
     @FXML
-    private JFXTextField txtNombre;
-    @FXML
-    private JFXTextField txtClave;
-    @FXML
-    private JFXTextField txtPalabradeSeguridad;
-    @FXML
     private JFXButton btnNuevo;
     @FXML
     private JFXButton btnSalir;
@@ -41,19 +36,18 @@ public class RegistroController extends Controller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       txtUsuario.setTextFormatter(Formato.getInstance().letrasFormat(15));
     }    
 
-    @FXML
-    private void onKeyPreseedUsuario(KeyEvent event) {
-    }
 
     @FXML
     private void onActionBtnNuevo(ActionEvent event) {
+          txtUsuario.clear();
     }
 
     @FXML
     private void onActionBtnSalir(ActionEvent event) {
+          getStage().close();
     }
 
     @FXML

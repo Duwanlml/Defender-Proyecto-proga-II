@@ -12,26 +12,16 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
  *
- * @author duwan
+ * @author Haymara
  */
-public class PrincipalViewController extends Controller implements Initializable {
+public class CreditosViewController extends Controller implements Initializable {
 
     @FXML
-    private AnchorPane root;
-    @FXML
-    private JFXButton btnMusica;
-    @FXML
-    private ImageView imvMusica;
-    @FXML
-    private JFXButton btnStart;
-    @FXML
-    private JFXButton btnEstadistica;
+    private JFXButton btnSalir;
 
     /**
      * Initializes the controller class.
@@ -42,13 +32,9 @@ public class PrincipalViewController extends Controller implements Initializable
     }    
 
     @FXML
-    private void onActionBtnStart(ActionEvent event) {
-        getStage().close();
+    private void onActionBtnSalir(ActionEvent event) {
+         getStage().close();
         FlowController.getInstance().goViewInWindow("LoginView");
-    }
-
-    @FXML
-    private void onActionBtnEstadistica(ActionEvent event) {
     }
 
     @Override
