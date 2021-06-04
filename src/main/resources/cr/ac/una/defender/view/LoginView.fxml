@@ -1,67 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="cr.ac.una.defender.controller.LoginViewController">
+<AnchorPane id="AnchorPane" prefHeight="354.0" prefWidth="499.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.defender.controller.LoginViewController">
    <children>
-      <VBox layoutX="6.0" layoutY="6.0" prefHeight="404.0" prefWidth="640.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox layoutX="9.0" layoutY="8.0" prefHeight="318.0" prefWidth="481.0">
          <children>
-            <VBox alignment="CENTER" prefHeight="19.0" prefWidth="580.0" VBox.vgrow="ALWAYS">
+            <VBox prefHeight="329.0" prefWidth="425.0">
                <children>
-                  <Label fx:id="lblTituloInicio" alignment="CENTER" prefHeight="25.0" prefWidth="90.0" styleClass="jfx-titulo-principal-label" text="Defender" />
-               </children>
-            </VBox>
-            <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="211.0" prefWidth="580.0" spacing="15.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="CENTER" prefHeight="174.0" prefWidth="425.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <VBox alignment="TOP_CENTER" prefHeight="237.0" prefWidth="477.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                        <Label fx:id="lblTituloInicio1" alignment="CENTER" styleClass="jfx-titulo-principal-label" text="Defender" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="301.0" prefWidth="475.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="177.0" prefWidth="576.0" spacing="15.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Label styleClass="jfx-titulo-label" text="Iniciar sesión" textAlignment="CENTER" />
-                              <JFXTextField fx:id="txtUsuario" alignment="CENTER" labelFloat="true" promptText="Usuario">
-                                 <VBox.margin>
-                                    <Insets left="120.0" right="120.0" />
-                                 </VBox.margin>
-                              </JFXTextField>
-                              <JFXPasswordField fx:id="txtClave" alignment="CENTER" labelFloat="true" promptText="Clave">
-                                 <VBox.margin>
-                                    <Insets left="120.0" right="120.0" />
-                                 </VBox.margin>
-                              </JFXPasswordField>
-                              <Label fx:id="labelOlvidarClave" onMouseClicked="#onActionLabelOlvidasteClave" styleClass="jfx-text-field" text="¿Olvidaste tu clave?" textAlignment="CENTER" textFill="#006bff" underline="true">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Label>
+                              <VBox alignment="TOP_CENTER" prefHeight="278.0" prefWidth="424.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Label prefHeight="39.0" prefWidth="91.0" text="Iniciar sesión" textAlignment="CENTER" />
+                                    <HBox alignment="CENTER" prefHeight="76.0" prefWidth="267.0">
+                                       <children>
+                                          <HBox prefHeight="76.0" prefWidth="65.0" />
+                                          <JFXTextField fx:id="txtUsuario" alignment="CENTER" labelFloat="true" prefHeight="20.0" prefWidth="235.0" promptText="Usuario" />
+                                          <JFXButton fx:id="brnCancelar" onAction="#onActionBtnCancelar" prefHeight="39.0" prefWidth="46.0" text=" ">
+                                             <graphic>
+                                                <ImageView fitHeight="27.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/cancelar.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets top="15.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Label fx:id="labelNuevoUsu" onMouseClicked="#onActionLabelNuevoUsu" styleClass="jfx-text-field" text="Registrar nuevo usuario" textAlignment="CENTER" textFill="#006bff" underline="true">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </VBox>
                            </children>
-                        </VBox>
-                        <Separator orientation="VERTICAL" prefHeight="287.0" prefWidth="0.0" styleClass="jfx-button-inicio">
-                           <HBox.margin>
-                              <Insets bottom="10.0" top="10.0" />
-                           </HBox.margin>
-                        </Separator>
+                        </HBox>
                      </children>
-                  </HBox>
-                  <HBox alignment="CENTER" styleClass="contenedorBtn" VBox.vgrow="ALWAYS">
-                     <children>
-                        <JFXButton fx:id="btnIngresar" onAction="#onActionBtnIngresar" prefHeight="47.0" prefWidth="104.0" text="Ingresar" />
-                        <JFXButton fx:id="btnRegistro" onAction="#onActionBtnRegistro" prefHeight="47.0" prefWidth="104.0" text="Registrarse" />
-                        <JFXButton fx:id="btnCreditos" onAction="#onActionBtnCreditos" prefHeight="47.0" prefWidth="104.0" text="Creditos" />
-                        <JFXButton fx:id="btnSalir" onAction="#onActionBtnSalir" prefHeight="47.0" prefWidth="104.0" text="Salir" />
-                     </children>
-                  </HBox>
+                  </VBox>
                </children>
             </VBox>
+            <HBox alignment="CENTER" prefHeight="77.0" prefWidth="424.0" styleClass="contenedorBtn">
+               <children>
+                  <JFXButton fx:id="btnIngresar" onAction="#onActionBtnIngresar" prefHeight="47.0" prefWidth="104.0" text="Ingresar" />
+                  <JFXButton fx:id="btnCreditos" onAction="#onActionBtnCreditos" prefHeight="47.0" prefWidth="104.0" text="Creditos" />
+                  <JFXButton fx:id="btnSalir" onAction="#onActionBtnSalir" prefHeight="47.0" prefWidth="104.0" text="Salir" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

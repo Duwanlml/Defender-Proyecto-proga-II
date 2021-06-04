@@ -12,28 +12,16 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 
 /**
  * FXML Controller class
  *
- * @author duwan
+ * @author Haymara
  */
-public class PrincipalViewController extends Controller implements Initializable {
+public class GameViewController extends Controller implements Initializable {
 
     @FXML
-    private AnchorPane root;
-    @FXML
-    private JFXButton btnMusica;
-    @FXML
-    private ImageView imvMusica;
-    @FXML
-    private JFXButton btnStart;
-    @FXML
-    private JFXButton btnEstadistica;
-    @FXML
-    private JFXButton btnInicio;
+    private JFXButton btnPausa;
 
     /**
      * Initializes the controller class.
@@ -43,23 +31,13 @@ public class PrincipalViewController extends Controller implements Initializable
         // TODO
     }    
 
-    @FXML
-    private void onActionBtnStart(ActionEvent event) {
-        getStage().close();
-        
-    }
-
-    @FXML
-    private void onActionBtnEstadistica(ActionEvent event) {
-    }
-
     @Override
     public void initialize() {
     }
 
     @FXML
-    private void onActionBtnInicio(ActionEvent event) {
-        getStage().close();
+    private void onActionBtnPausa(ActionEvent event) {
+        FlowController.getInstance().goViewInWindowModal("MenuGame", this.getStage(), Boolean.TRUE);
     }
     
 }
