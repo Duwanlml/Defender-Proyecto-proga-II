@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.defender.controller.GameViewController">
+   <top>
+      <AnchorPane prefHeight="47.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="105.0" prefWidth="869.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="btnPausa" onAction="#onActionBtnPausa" prefHeight="23.0" prefWidth="48.0" text="stop" />
+                  <HBox prefHeight="85.0" prefWidth="170.0">
+                     <children>
+                        <ImageView fitHeight="39.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" />
+                        <VBox prefHeight="85.0" prefWidth="129.0">
+                           <children>
+                              <Label text="Puntuacion:" />
+                              <Label alignment="CENTER" prefHeight="25.0" prefWidth="85.0" text="--" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label prefHeight="25.0" prefWidth="59.0" text="Nivel: " />
+                  <Label prefHeight="25.0" prefWidth="56.0" text="---" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="631.0" prefWidth="869.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="577.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/Castillo.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
