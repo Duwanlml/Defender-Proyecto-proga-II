@@ -62,7 +62,8 @@ public class LoginViewController extends Controller implements Initializable {
                 new Mensaje().showModal(Alert.AlertType.ERROR, "Validacion de usuario", getStage(), "Es necesario digitar un usuario para ingresar al sistema.");
           }else{
                 AppContext.getInstance().set("Usuario", txtUsuario.getText());
-                FlowController.getInstance().goMain();
+               //FlowController.getInstance().goMain(); para ingresar a la ventana principal
+               FlowController.getInstance().goViewInWindow("GameView");
                 getStage().close();
             }
         }catch(Exception ex){
